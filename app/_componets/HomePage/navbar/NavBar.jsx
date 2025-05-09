@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Image from 'next/image'
+import Image from "next/image";
 import Link from "next/link";
 
 const navigation = [
@@ -63,22 +63,18 @@ export default function HeroSection() {
         }`}
       >
         {/* <div>L4IT</div> */}
-        <div className="">  <Image
-      src="/l4itremoved.png"
-      width={200}
-      height={100}
-      alt="Picture of the author"
-    />
-    
-    </div>
+        <div className="">
+          {" "}
+          <Image
+            src="/l4itremoved.png"
+            width={200}
+            height={100}
+            alt="Picture of the author"
+          />
+        </div>
         <div className="hidden md:flex gap-6">
           {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={`#${item.name}`}
-              onClick={(e) => handleScrollTo(e, item.name)}
-              className="text-lg font-semibold cursor-pointer"
-            >
+            <Link key={item.name} href={`/${item.name}`}>
               {item.name}
             </Link>
           ))}
@@ -92,7 +88,7 @@ export default function HeroSection() {
 
       {/* Center Text */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-4xl md:text-6xl font-bold max-w-3xl " >
+        <h1 className="text-4xl md:text-6xl font-bold max-w-3xl ">
           Is Your Information Technology Aligned with Your Business Goals?
         </h1>
         <p className="mt-6 max-w-xl text-lg md:text-xl text-gray-200">
@@ -101,15 +97,12 @@ export default function HeroSection() {
         </p>
         <div className="mt-8 flex gap-4">
           <Link
-            href="#Contact"
-            onClick={(e) => handleScrollTo(e, "Contact")}
+            href="/secondpage"
+            // onClick={(e) => handleScrollTo(e, "Contact")}
             className="bg-red-800 hover:bg-red-600 text-white font-semibold px-6 py-2 rounded-md"
           >
             Schedule a Consultation
           </Link>
-          {/* <a href="#About" onClick={(e) => handleScrollTo(e, "About")} className="text-white font-semibold underline">
-            Learn more
-          </a> */}
         </div>
       </div>
     </div>

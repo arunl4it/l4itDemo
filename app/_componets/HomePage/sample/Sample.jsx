@@ -1,5 +1,14 @@
+'use client'
+import { motion } from "framer-motion";
 export default function Sample() {
   return (
+    <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true, amount: 0.3 }}
+    transition={{ duration: 0.6 }}
+    >
+
     <div className="bg-white pt-28 pb-28">
       <div className="max-w-7xl  mx-auto py-5">
         {/* the heading and paragraph section start */}
@@ -61,5 +70,7 @@ export default function Sample() {
         </div>
       </div>
     </div>
+    </motion.div>
+
   );
 }
